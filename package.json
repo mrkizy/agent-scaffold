@@ -1,0 +1,16 @@
+{
+  "name": "local-cao-agent-scaffold",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "bin": {
+    "agent-scaffold": "bin/agent-scaffold.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "link-local": "npm link",
+    "check": "node --check bin/agent-scaffold.js && for file in src/*.js; do node --check \"$file\" || exit 1; done"
+  }
+}
